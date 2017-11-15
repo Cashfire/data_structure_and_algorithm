@@ -12,51 +12,39 @@ public class MergeSort {
         }
     }
     
-	void merge(int arr[], int l, int m, int r){
-        // Find sizes of 2 subarrays to be merged
-        int n1 = m - l + 1;
-        int n2 = r - m;
- 
-        /* Create temporary arrays */
-        int ltArr[] = new int [n1];
-        int rtArr[] = new int [n2];
- 
-        /*Copy data to temp arrays*/
-        for(int i=0; i< n1; ++i)
-            ltArr[i] = arr[l + i];
-        for (int j=0; j< n2; ++j)
-            rtArr[j] = arr[m + 1+ j];
- 
-        /* Merge the 2 temp arrays */
-        // Initial indexes of first and second subarrays
-        int i = 0, j = 0;
- 
-        int k = l;// Initial index of merged array
-        while (i < n1 && j < n2){
-            if (ltArr[i] <= rtArr[j]){
-                arr[k] = ltArr[i];
-                i++;
-            }
-            else{
-                arr[k] = rtArr[j];
-                j++;
-            }
-            k++;
-        }
- 
-        /* Copy remaining elements of ltArr[] if any */
-        while (i < n1){
-            arr[k] = ltArr[i];
-            i++;
-            k++;
-        }
- 
-        /* Copy remaining elements of R[] if any */
-        while (j < n2){
-            arr[k] = rtArr[j];
-            j++;
-            k++;
-        }
+    void merge(int arr[], int l, int m, int r){
+		int length = r-l+1;
+		int temp[] = new int[length];
+		int i = l;
+		int j = m+1;
+		int k = 0; //index of the temp array.
+		while(i <= m && j <=r){
+			if(arr[i]<arr[j]){
+				temp[k] = arr[i];
+				i++;
+				k++;			
+			}else{
+				temp[k] = arr[j];
+				j++;
+				k++;
+			}
+		}
+		//if the left part of arr still remains
+		while(i<=m){
+			temp[k] = arr[i];
+			i++;
+			k++;
+		}
+		while(j<=r){
+			temp[k] = arr[j];
+			j++;
+			k++;
+		}
+		
+		k = 0;
+		for(int x= l; x<=r; x++, k++){
+			arr[x]= temp[k];
+		}
     }
  
  
