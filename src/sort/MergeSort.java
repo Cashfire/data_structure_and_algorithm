@@ -19,7 +19,7 @@ public class MergeSort {
 		int j = m+1;
 		int k = 0; //index of the temp array.
 		while(i <= m && j <=r){
-			if(arr[i]<arr[j]){
+			if(arr[i] <arr[j]){
 				temp[k] = arr[i];
 				i++;
 				k++;			
@@ -55,7 +55,6 @@ public class MergeSort {
 		for(int num : arr1){
 			System.out.print(num+", ");
 		}
-
 	}
 
 }
