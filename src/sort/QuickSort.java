@@ -1,12 +1,13 @@
 package sort;
-
-public class QuickSort {
-	/* This function takes last element as pivot,
+/*
+ * This function takes last element as pivot,
     places the pivot element at its correct
     position in sorted array, and places all
     smaller (smaller than pivot) to left of
     pivot and all greater elements to right
-    of pivot */
+    of pivot
+ */
+public class QuickSort {
 	int partition(int arr[], int left, int right)
 	 {
 	     int pivot = arr[right]; 
@@ -48,7 +49,7 @@ public class QuickSort {
 		
 		   
 	public static void main(String[] args) {
-		int arr[] = {5, 7, 2,1, 3};
+		int arr[] = {5, 7, 2, 1, 3};
         int n = arr.length;
  
         QuickSort ob = new QuickSort();
