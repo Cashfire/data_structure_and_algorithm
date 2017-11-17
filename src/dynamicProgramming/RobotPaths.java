@@ -1,4 +1,14 @@
 package dynamicProgramming;
+/**
+ * A robot on the upper left corner of a grid, can only move right or down.
+ * If the exit is the bottom right, and certain cells are limited as blocks.
+ * How many paths the robot has?
+ * @author Mao
+ * 1, describe the world.
+ * p[i][j]: at position(i,j), how many possible ways it has
+ * 2, formula: p[i][j]=p[i+1][j]+p[i][j+1]
+ * 3, initiation: the last row and column.
+ */
 
 public class RobotPaths {
 
