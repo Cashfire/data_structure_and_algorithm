@@ -11,29 +11,55 @@ public class LCS {
 		String s2 = "androy";
 		char[] a1= s1.toCharArray();
 		char[] a2= s2.toCharArray();
-		int n = s1.length();
-		int m = s2.length();
-		//System.out.println("n:"+n+" m:"+m);
-		int[][] dp= new int[m+1][n+1];//
-		//the 1st row and column are Zeros by default
-		//fill from the 2nd row and column
-		for(int i = 1; i< m+1; i++){
-			for(int j = 1; j<n+1;j++){
-				if(a2[i-1] == a1[j-1]){
-					dp[i][j]= dp[i-1][j-1] +1;
-					if(dp[i][j] > dp[i-1][j]){
-						System.out.print(a2[i-1]);
-					}
-				}else{
-					dp[i][j]= max(dp[i-1][j],dp[i][j-1]);
+		int n = s1.length();//a1(i->n)
+		int m = s2.length();//a2(j->m)
+		int[][] dp= new int[m][n];//m rows and n columns
+		
+		// set the 1st row of the dp table 
+		for(int c = 0; c < n; c++){
+			if(a1[c]==a2[0]){
+				dp[0][c] = 1;
+				for(int i =0; i< n; i++){
+					dp[0][i] = 1;
 				}
-				//System.out.print(dp[i][j]);
+				break;
 			}
-			//System.out.println();
 		}
 		
+		//set the 1st column of the dp table
+		for(int r = 0; r < m; r++){
+			if(a2[r]==a1[0]){
+				dp[r][0] = 1;
+				for(int i = 0; i< m; i++){
+					dp[i][0] = 1;
+				}
+				break;
+			}
+		}
+		
+		//fill dp table from the 2nd row and column
+		for(int r = 1; r< m; r++){
+			for(int c = 1; c < n;c++){
+				if(a1[r] == a2[c]){
+					dp[r][c]= dp[r-1][c-1] +1;
+				}else{
+					dp[r][c]= max(dp[r-1][c],dp[r][c-1]);
+				}			
+			}
+		}
+		
+		System.out.println("The longest common subsequence is: "+dp[m-1][n-1]);
+		//print the dp table
+		for(int j = 0; j<m; j++){
+			for(int i = 0; i<n; i++){
+				System.out.print(dp[j][i]+" ");
+			}
+			System.out.println();
+		}
 	}
 
+	
+	
 	private static int max(int x, int y) {
 		if(x > y){
 			return x;
