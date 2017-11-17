@@ -33,7 +33,7 @@ public class RoundRobinScheduling {
 	
 	public static void main(String[] args){
 		int[][] table = new int[4][4];
-		int n = 4; //n should be a multiple of 4.
+		int n = 4; //n should be a Exponentiation of base 2 = 2^x.
 		RoundRobinScheduling rrs = new RoundRobinScheduling();
 		rrs.scheduleTable(table, n);
 		//print the table
