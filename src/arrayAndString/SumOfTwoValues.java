@@ -7,6 +7,7 @@ package arrayAndString;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class SumOfTwoValues {
 
@@ -42,19 +43,22 @@ class TwoSumSolution{
 	 * Runtime complexity: O(n), Memory complexity: O(n).
 	 */
 	int[] hashApproach(int[]arr, int val){
-		//create a new ArrayList, check the complement before adding
-		
-		ArrayList<Integer> al = new ArrayList<Integer>();
+		//create a new HashSet, check the complement before adding
+		//Advantage: search element in hashSet is O(1) complexity.
+		HashSet<Integer> hs = new HashSet<Integer>();
 		for(Integer num: arr){
 			int complement = val - num;
-			if(al.contains(complement)){
+			if(hs.contains(complement)){  
 				return new int[] {complement, num};
 			}
-			al.add(num);
+			hs.add(num);
 		}
 		throw new IllegalArgumentException("No two sum solution");
 	}
 	
+	/*
+	 * Runtime complexity: O(n logn), Memory complexity: O(1).
+	 */
 	int[] orderedSum(int[] arr, int val){
 		 for(int i = 0, j = arr.length-1; i<j;){
 			 int sum = arr[i] + arr[j];
