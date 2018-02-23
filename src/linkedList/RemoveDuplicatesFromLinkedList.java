@@ -1,3 +1,7 @@
+/*
+ * given a linkedlist of integers, remove all the duplicate nodes from it,
+ *  by keeping only the first occurrence of each duplicate.
+ */
 package linkedList;
 
 import java.util.HashSet;
