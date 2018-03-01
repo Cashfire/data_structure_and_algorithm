@@ -12,7 +12,7 @@ public class DeleteNodeWithKey {
 	static class LinkedListNode{
 		int value;
 		LinkedListNode next;
-		LinkedListNode(int x) {value = x;}
+		LinkedListNode(int x) {this.value = x;}
 		public String toString() {return "Node:" + value;}
 	}
 	void printList(LinkedListNode head_node){
