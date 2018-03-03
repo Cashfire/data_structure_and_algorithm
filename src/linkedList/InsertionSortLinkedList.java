@@ -1,7 +1,7 @@
 /*
  * Given head pointer of a linked list, sort the linked list (in ascending order) 
  * and return new head pointer of the sorted linked list.
- * Space complexity: insertion sort (but runtime is O(n^2))
+ * Space complexity: O(1) insertion sort (but runtime is O(n^2))
  */
 package linkedList;
 
