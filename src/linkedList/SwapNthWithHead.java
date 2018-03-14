@@ -1,4 +1,9 @@
-
+/*
+ * Given the head of a singly linked list and 'N', 
+ * swap the head with Nth node. Return the head of the new linked list.
+ * Runtime Complexity: Linear, O(n).
+ * Memory Complexity: Constant, O(1).
+ */
 
 package linkedList;
 
