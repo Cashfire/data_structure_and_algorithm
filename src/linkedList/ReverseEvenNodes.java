@@ -11,17 +11,16 @@ public class ReverseEvenNodes {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		MyLinkedList mylist = new MyLinkedList();
-		//Create an unsorted LinkedList: {5,4,10,8,7,9}
 		mylist.addLast(2);
 		mylist.addLast(4);
 		mylist.addLast(8);
 		mylist.addLast(16);
-//		mylist.addLast(32);
+		mylist.addLast(32);
 
 		System.out.println("Unsorted linkedList is: ");
 		mylist.printList();
 		
-		//apply merge sort
+		//apply reverseEvenNodes
 		ReverseEvenNodesSolution ren = new ReverseEvenNodesSolution();
      	mylist.head = ren.reverse(mylist.head);
 
@@ -54,8 +53,8 @@ class ReverseEvenNodesSolution{
 	MyLinkedList.Node merge(MyLinkedList.Node h1, MyLinkedList.Node h2){
 			MyLinkedList.Node merged_head = h1;
 			
-			//For example, the lists heads are n1 and n2.
-			while(h1 != null && h2 != null){
+			//odd elements always >= even elements.
+			while(h2 != null){
 				MyLinkedList.Node temp = h2; //h2 = temp,
 				//update the head pointer h2.
 				h2 = h2.next ;               //h2 = n4,
@@ -70,6 +69,10 @@ class ReverseEvenNodesSolution{
 		}
 		
 		MyLinkedList.Node reverse(MyLinkedList.Node h){
+			//Base case: no need to call other functions
+			if(h == null || h.next == null || h.next.next == null || h.next.next.next == null){
+				return h;
+			}
 			MyLinkedList.Node even_head = extract_even_nodes(h);
 			MyLinkedList.Node result = merge(h, even_head);
 			return result;
