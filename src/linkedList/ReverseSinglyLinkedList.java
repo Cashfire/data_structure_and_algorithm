@@ -39,14 +39,14 @@ class solution{
 	 */
 	LinkedListNode iterativeApproach(LinkedListNode head){
 		LinkedListNode curr = head;
-		LinkedListNode reversed = null;
+		LinkedListNode reversed_head = null;
 		while(curr != null){
 			LinkedListNode temp = curr.next;
-			curr.next = reversed;
-			reversed = curr;
+			curr.next = reversed_head;
+			reversed_head = curr;
 			curr = temp;
 		}
-		return reversed;
+		return reversed_head;
 	}
 	
 	/*
