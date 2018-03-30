@@ -1,5 +1,7 @@
 /*
  * Given a sorted set of n elements find the lexicographically kth permutation.
+ * TC: O(n), 
+ * SC: O(n).
  */
 package mathAndStats;
 
@@ -18,12 +20,12 @@ public class FindKthPermutation {
 		if(v.isEmpty()) return;
 			
 		int n = v.size();
-		
+		//block_size is the permutation amount when 1 char is fixed.
 		int block_size = get_factorial(n-1);
 		int select_id = (k-1)/ block_size;
 		Character selected = v.get(select_id);
 		result.add(selected);
-		//update v and k.
+		//update v, n and k.
 		v.remove(select_id);
 		k = k - (block_size * select_id);
 		get_permutation(k, v);
