@@ -9,7 +9,7 @@
  * Memory complexity: O(1).
  */
 
-package arrayAndString;
+package arrays;
 
 public class FindLowOrHighIndex {
 	static int find_low_index(int[] arr, int key){

@@ -1,4 +1,4 @@
-package arrayAndString;
+package arrays;
 
 
 public class Compress {

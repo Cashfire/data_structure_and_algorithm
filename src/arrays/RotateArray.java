@@ -2,7 +2,7 @@
  * 
  */
 
-package arrayAndString;
+package arrays;
 
 import java.util.*;
 

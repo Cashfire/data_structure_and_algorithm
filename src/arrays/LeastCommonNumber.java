@@ -4,7 +4,7 @@
  * Runtime complexity: Linear, O(n);
  * Memory complexity: constant, O(1).
  */
-package arrayAndString;
+package arrays;
 
 public class LeastCommonNumber {
 	public static int find_least_common_number(int[] a1, int[] a2, int[]a3){

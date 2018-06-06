@@ -1,7 +1,7 @@
 /*
  * Search a sorted array of integers, return the index of the given key. Return -1 if not found.
  */
-package arrayAndString;
+package arrays;
 
 public class BinarySearch {
 	static int arr1[] = {1,10,20,47,59,63,75,88,99,107,120,133,155,162,176,188,199,200,210,222};

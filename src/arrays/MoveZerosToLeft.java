@@ -3,7 +3,7 @@
  * runtime complexity: o(n).
  * memory complexity: o(1).
  */
-package arrayAndString;
+package arrays;
 
 import java.util.Arrays;
 

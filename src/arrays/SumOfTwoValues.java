@@ -2,7 +2,7 @@
  * Given a value and an array of integers, 
  * determine if there are any 2 integers in the array which sum equal to the given value.
  */
-package arrayAndString;
+package arrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;

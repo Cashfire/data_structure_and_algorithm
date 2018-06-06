@@ -4,7 +4,7 @@
  * Given (1,5), (6,10), (4,7), (15,17), (16,20),
  * return (1,10), (15,20).
  */
-package arrayAndString;
+package arrays;
 
 import java.util.ArrayList;
 import java.util.Collections;

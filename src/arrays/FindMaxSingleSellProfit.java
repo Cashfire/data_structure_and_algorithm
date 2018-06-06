@@ -3,7 +3,7 @@
  * For example, {9,15,19, 1, 12}, when buy_price=1 and sell_price=12, the profit is max.
  * Hint: Kadane's algorithm.
  */
-package arrayAndString;
+package arrays;
 
 import java.util.Arrays;
 

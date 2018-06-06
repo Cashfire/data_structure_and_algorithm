@@ -5,7 +5,7 @@
  * {4,5,1,2,3}, the first part is not ascending (4>1), the second part is strictly ascending;
  * {3,4,5,1,2}, the 2nd part is not ascending (5<2), the 1st part is strictly ascending;
  */
-package arrayAndString;
+package arrays;
 
 public class SearchRotatedArray {
 
