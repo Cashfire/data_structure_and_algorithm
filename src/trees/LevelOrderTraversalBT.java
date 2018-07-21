@@ -10,7 +10,7 @@ package trees;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class LevelOrderTraversalBST {
+public class LevelOrderTraversalBT {
 	void print(Node root){
 		Queue<Node> curr_level = new LinkedList<>();
 		curr_level.add(root);
@@ -49,7 +49,7 @@ public class LevelOrderTraversalBST {
 		tr1.root.left.right.right = new Node (80);
 		tr1.root.right = new Node(200);
 		tr1.root.right.right = new Node(350);
-		LevelOrderTraversalBST lot = new LevelOrderTraversalBST();
+		LevelOrderTraversalBT lot = new LevelOrderTraversalBT();
 		System.out.println("Level order traversal of the Binary Tree is: ");
 		lot.print(tr1.root);
 		
