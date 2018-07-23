@@ -2,8 +2,7 @@
  * Convert a binary tree to a doubly linked list such that 
  * the order of the doubly linked list is the same as an in-order traversal of the binary tree.
  * TC: Linear, O(n). 
- * SC: Linear, O(h). Recursive solution has O(h) memory complexity as it will consume memory on the stack 
- * up to the height of binary tree 'h'. It will be O(log n) for balanced tree and in worst case can be O(n).
+ * SC: Linear, O(h). Recursive solution has O(h) memory complexity as it will consume memory on the stack up to the height of binary tree 'h'. It will be O(log n) for balanced tree and in worst case can be O(n).
  */
 package trees;
 
